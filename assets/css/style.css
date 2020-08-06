@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css?family=Londrina Solid:100,200,300,400,500,600,700|Roboto:100,200,300,400,500,600,700');
+
+/* page background */
+
+.bg{
+      background-image: url("../images/background.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/* Header */
+.ovr-head{
+    text-align: center;
+    margin-top: 2.5em; 
+}
+
+.con-head{
+    text-align: center;
+}
+
+.head{
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 500;
+    font-size: 7.5em;
+    color: rgb(211,211,211);
+    border: solid black 3px;
+    display: inline;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 0px 5px;
+}
+
+.sub{
+    text-align: center;
+    margin-top: 2.5em; 
+}
+.sub-head{
+    font-family: "Londrina Solid", sans-serif;
+    font-weight: 500;
+    font-size: 3em;
+    color: rgb(211,211,211);
+    border: solid black 3px;
+    display: inline;
+    background-color: rgba(0, 0, 0, .4);
+    padding: 0px 5px;
+    text-transform: uppercase;
+    
+}
+
+/*Nav Buttons */
+.gp-button{
+    text-align: center;
+    margin-top: 4.5em;
+}
+
+.con-button{
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.btn-outline-secondary{
+    color: rgb(211,211,211);
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, .3);
+    border: solid black 3px;
+}
+
+/* Contact Form */
+
+.cont-form{
+    margin-top: 2em;
+    padding: 0em 15em; 
+}
+
+.form-control{
+    font-size:20px;
+    font-family: "Londrina Solid", sans-serif;
+    color: rgb(211,211,211);
+    background-color: rgba(0, 0, 0, .7);
+    border: solid black 3px;
+    font-weight: 300;
+}
+
+.form-control:focus {
+font-family: "Londrina Solid", sans-serif;
+font-weight: 300;
+color: rgb(211,211,211);
+background-color: rgba(0, 0, 0, .9);
+border: solid black 3px;
+box-shadow: 0 0 0 0.2rem rgb(211,211,211);
+}
+
+/* Contact form Buttons */
+
+.send-btn{
+    text-align: left;
+    margin-top: .5em;
+}
+
+.hme-btn{
+padding: .5em .5em;
+}
+
+.home-btn{
+    color: rgb(211,211,211);
+    font-family: "Londrina Solid", sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, .3);
+    border: solid black 3px;
+}
