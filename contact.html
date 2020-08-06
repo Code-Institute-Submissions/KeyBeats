@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      type="text/css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
-      integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv"
-      crossorigin="anonymous"
-    />
+
+     <!--Link to Bootstrap CDN-->
+    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
+
+   <!-- Link to CSS styles -->
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <title>KeyBeats</title>
+
+    <!--Link to emailjs CDN, code used from emailjs.com-->    
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init("user_YYlsQ9C2QQiBoKPuWgfQr");
+         })();
+        </script>
+
   </head>
 
   <body class="bg">
@@ -33,22 +36,22 @@
       </div>
       <!-- Contact Form -->
      
-        <form class="cont-form">
+        <form class="cont-form" onsubmit="return sendMail(this);">
 
           <!-- Name -->
           <div class="form-group">
-            <input type="text" class="form-control" id="InputName" aria-describedby="nameHelp" placeholder="Name:"/>
+            <input type="text" class="form-control" name="name" id="InputName" aria-describedby="nameHelp" placeholder="Name:" required/>
           </div>
 
           <!-- Email -->
           <div class="form-group">
-            <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Email:" />
+            <input type="email" class="form-control" name="emailaddress" id="email" aria-describedby="emailHelp" placeholder="Email:" required/>
           </div>
 
          <!-- Input Box -->
             <div class="form-group">
 			    <label for="FormControlTextarea"></label>
-				<textarea class="form-control rounded-0" id="FormControlTextarea" rows="3" placeholder="Send Us A Message!"></textarea>
+				<textarea class="form-control rounded-0" name="message" id="message" rows="3" placeholder="Send Us A Message!" required></textarea>
 			</div>
 
             <!-- Send Button -->
@@ -57,6 +60,21 @@
 			</div>
         </form>
       </div>
-   
+
+          <!--Link to Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+
+   <!--Link to JQuery CDN-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js">
+        </script>
+
+        <!--Link to script contact.js-->
+        <script src="assets/js/email.js"></script>
+
   </body>
 </html>
