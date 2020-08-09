@@ -4,10 +4,10 @@
 
 .bg{
       background-image: url("../images/background.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
    -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -114,4 +114,51 @@ padding: .5em .5em;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, .3);
     border: solid black 3px;
+}
+
+/* Game Page buttons */
+
+.col-sm{
+    text-align: center;
+    margin-top: 7em;
+}
+.top-rw{
+    margin-top: 3em;
+}
+.btm-rw{
+    margin-top: 5em;
+}
+.fa-arrow-circle-up{
+    font-size: 5em;
+    color: rgb(255,153,204);
+    border: solid black 3px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.fa-arrow-circle-right{
+    font-size: 5em;
+    color: rgb(191,179,255);
+    border: solid black 3px;
+    background-color: rgba(0, 0, 0, .5);
+   
+}
+.fa-arrow-circle-down{
+    font-size: 5em;
+    color: rgb(128,255,128);
+    border: solid black 3px;
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+.fa-arrow-circle-left{
+    font-size: 5em;
+    color: rgb(128,191,255);
+    border: solid black 3px;
+    background-color: rgba(0, 0, 0, .5);
+    
+}
+.fa-music{
+    font-size: 5em;
+    color: rgb(255,187,51);
+    border: solid black 3px;
+    background-color: rgba(0, 0, 0, .5);
+    
 }
