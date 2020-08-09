@@ -1,56 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" class="ind-bg">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-     <!--Link to Bootstrap CDN-->
-    <link  rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css" />
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-   <!-- Link to CSS styles -->
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <title>KeyBeats</title>
+	<!--Link to Bootstrap CSS CDN-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		type="text/css" />
 
-    <!-- Link to Fontawesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+	<!-- Link to CSS styles -->
+	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+	<title>KeyBeats</title>
+
+	<!-- Link to Fontawesome CDN -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
 		integrity="sha384-v8BU367qNbs/aIZIxuivaU55N5GPF89WBerHoGA4QTcbUjYiLQtKdrfXnqAcXyTv" crossorigin="anonymous">
- </head>
 
-  <body class="bg">
-  <!-- Home button -->
-   <div class="hme-btn"> <a href="index.html" class="btn btn-outline-secondary home-btn" role="button">Take Me Home</a></div>
-    
-
-      <!-- Top row buttons -->
-    <div class="container">
-    <div class="row top-rw">
-    <div class="col-sm">
-        <i class="fas fa-arrow-circle-up"></i>
-    </div>
-     <div class="col-sm">
-       <i class="fas fa-music"></i>
-    </div>
-    <div class="col-sm">
-        <i class="fas fa-arrow-circle-right"></i>
-    </div>
-    </div>
-    <!-- Bottom row buttons -->
-    <div class="row btm-rw">
-          <div class="col-sm">
-        <i class="fas fa-arrow-circle-left"></i>
-    </div>
-    <div class="col-sm">
-        <i class="fas fa-arrow-circle-down"></i>
-    </div>
-    </div>
-
-</div>
-    
-
-   <!--Link to JQuery CDN-->
+    <!--Link to JQuery CDN-->
         <script src="https://code.jquery.com/jquery-3.5.1.js">
         </script>
 
-  </body>
+        <!-- Modal Script -->
+        <script>
+    $(document).ready(function(){
+        $("#myModal").modal('show');
+    });
+</script>
+
+<!-- Drum Loop Script  -->
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
+    audioElement.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
+
+    </script>
+
+</head>
+
+<body class="bg">
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Instructions</h4>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">Keybeats is a musical memory game. A drumbeat will start at the click of the 'START' button and 
+          the icons will randomly highlght in a sequence, you must memorise and reproduce the sequence using the conrrespoding arrow
+          keys and space bar for the music notes.</p>
+            <br>
+            <p class ="modal-text">Good Luck and Have fun!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Play</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+	<!-- Home button -->
+	<div class="hme-btn"> <a href="index.html" class="btn btn-outline-secondary home-btn" role="button">Take Me Home</a>
+	</div>
+
+    <!-- Start Game Button -->
+    <div class="go-btn"><button class="btn btn-outline-secondary home-btn" role="button" onclick="play()">Start</button>
+	</div>
+    <audio id="audio" src="assets/audio/drumloopkb.wav" loop="loop"></audio>
+
+
+	<!-- Top row buttons -->
+	<div class="container">
+		<div class="row top-rw">
+			<div class="col-sm">
+				<i class="fas fa-arrow-circle-up" id="arrowup" onkeypress="arrowup"></i>
+			</div>
+			<div class="col-sm">
+				<i class="fas fa-music" id="quaver"></i>
+			</div>
+			<div class="col-sm">
+				<i class="fas fa-arrow-circle-right" id= "arrowrgt"></i>
+			</div>
+		</div>
+		<!-- Bottom row buttons -->
+		<div class="row btm-rw">
+			<div class="col-sm">
+				<i class="fas fa-arrow-circle-left" id="arrowleft"></i>
+			</div>
+			<div class="col-sm">
+				<i class="fas fa-arrow-circle-down" id="arrowdown"></i>
+			</div>
+		</div>
+
+	</div>
+
+
+	   <!--Link to Bootstrap CDN-->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+        </script>
+    
+        <!--Link to script contact.js-->
+        <script type="text/javascript" src="assets/js/game.js"></script>
+
+
+</body>
+
 </html>

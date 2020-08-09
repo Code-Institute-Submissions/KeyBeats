@@ -115,9 +115,35 @@ padding: .5em .5em;
     background-color: rgba(0, 0, 0, .3);
     border: solid black 3px;
 }
+/* Modal */
+
+.modal-content{
+     border: solid black 3px;
+     background-color: rgba(0, 0, 0, .2);
+}
+
+.modal-title{
+      font-family: "Londrina Solid", sans-serif;
+    font-weight: 500;
+    font-size: 2em;
+    color: rgb(211,211,211);
+    display: inline;
+    padding: 0px 5px;
+    text-transform: uppercase;
+}
+
+.modal-text{
+    font-family:"Londrina Solid", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(211,211,211);   
+}
 
 /* Game Page buttons */
-
+.go-btn{
+    padding: .5em .5em;
+}
 .col-sm{
     text-align: center;
     margin-top: 7em;
