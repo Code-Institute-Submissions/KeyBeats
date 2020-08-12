@@ -188,3 +188,8 @@ padding: .5em .5em;
     background-color: rgba(0, 0, 0, .5);
     
 }
+
+/*Effect to icon when clicked by player*/
+.effect-logo{
+    box-shadow: 0 0 2rem 1rem rgba(251, 255, 0, 0.753);
+}
