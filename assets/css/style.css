@@ -148,9 +148,7 @@ padding: .5em .5em;
     text-align: center;
     margin-top: 7em;
 }
-.top-rw{
-    margin-top: 3em;
-}
+
 .btm-rw{
     margin-top: 5em;
 }
@@ -189,6 +187,18 @@ padding: .5em .5em;
     
 }
 
+/* Scores */
+.score, #timer{ 
+    font-family:"Londrina Solid", sans-serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: rgb(211,211,211); 
+    float: right;
+    display: inline;
+    margin-right: 1em;
+
+}
 /*Effect to icon when clicked by player*/
 .effect-logo{
     box-shadow: 0 0 2rem 1rem rgba(251, 255, 0, 0.753);

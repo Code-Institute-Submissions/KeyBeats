@@ -36,11 +36,6 @@
         audio.play();
       }
 
-    audioElement.addEventListener('ended', function() {
-    this.currentTime = 0;
-    this.play();
-}, false);
-
     </script>
 
 </head>
@@ -72,43 +67,56 @@
   </div>
 	<!-- Home button -->
 	<div class="hme-btn"> <a href="index.html" class="btn btn-outline-secondary home-btn" role="button">Take Me Home</a>
+    <h5 class="score">High Score: <span id="highScore">0</span></h5>
+    <h5 class="score">Your Score: <span id="score">0</span></h5>
+    <div id="timer"></div>
+    
+    
+   
 	</div>
+     
+    
 
     <!-- Start Game Button -->
-    <div class="go-btn"><button class="btn btn-outline-secondary home-btn start" role="button" onclick="play()">Start</button>
+    <div class="go-btn"><button class="btn btn-outline-secondary home-btn" id="start" role="button" onclick="play()">Start</button>
 	</div>
     <audio id="audio" src="assets/audio/drumloopkb.wav" loop="loop"></audio>
+
+    
+ 
+                    
 
 
 	<!-- Top row buttons -->
 	<div class="container">
 		<div class="row top-rw">
-			<div class="col-sm">
-				<i class="fas fa-arrow-circle-up" id="arrowup" onkeypress="arrowup"></i>
+			<div class="col-sm game-icon">
+				<i class="fas fa-arrow-circle-up" id="arrowup"></i>
                 <audio id="arrowu" src="assets/audio/cello.wav"></audio>
 			</div>
-			<div class="col-sm">
-				<i class="fas fa-music" id="quaver"></i>
+			<div class="col-sm game-icon">
+				<i class="fas fa-music" id="quaver" ></i>
                 <audio id="musicnote" src="assets/audio/guitar.wav"></audio>
 			</div>
-			<div class="col-sm">
-				<i class="fas fa-arrow-circle-right" id= "arrowrgt"></i>
+			<div class="col-sm game-icon">
+				<i class="fas fa-arrow-circle-right" id= "arrowrgt" ></i>
                 <audio id="arrow-right" src="assets/audio/rhodes.wav"></audio>
 			</div>
 		</div>
 		<!-- Bottom row buttons -->
-		<div class="row btm-rw">
-			<div class="col-sm">
-				<i class="fas fa-arrow-circle-left" id="arrowleft"></i>
+		<div class="row btm-rw ">
+			<div class="col-sm game-icon">
+				<i class="fas fa-arrow-circle-left" id="arrowleft" ></i>
                 <audio id="arrowlft" src="assets/audio/trumpet.wav"></audio>
 			</div>
-			<div class="col-sm">
+			<div class="col-sm game-icon">
 				<i class="fas fa-arrow-circle-down" id="arrowdown"></i>
                 <audio id="arrowdwn" src="assets/audio/fvox.wav"></audio>
 			</div>
 		</div>
 
 	</div>
+    <h3 id="lost" class="youlost">You Lost! Press start to play again!</h3>
 
 
 	   <!--Link to Bootstrap CDN-->
