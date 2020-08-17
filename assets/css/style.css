@@ -205,6 +205,6 @@ padding: .5em .5em;
 }
 /*Effect to icon when clicked by player*/
 .effect-logo{
-    /* box-shadow: 0 0 2rem 1rem rgba(251, 255, 0, 0.753); */
-    border: solid red 5px;
+    box-shadow: 0 0 2rem 1rem rgba(251, 255, 0, 0.753); 
+    
 }

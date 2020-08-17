@@ -1,14 +1,10 @@
 /* game variables */
-var game =
- gameorder =[];
- computerturn = [];
- playerturn = [];
- score = 0;
-
-
-
-/* Random sequence for icon selection  */
-
+let game = {
+ gameorder:[],
+ computerturn:[],
+ playerturn :[],
+ score: 0
+}
 
 /* Start new game */
     $("#start").click(function () {
@@ -20,7 +16,7 @@ function newGame(){
      game.gameorder = [];
      game.computerturn = [];
      game.playerturn = [];
-     game.score = 0;
+     game.score = 99999;
      sequence();
 }
 
@@ -41,8 +37,34 @@ function iconGlow(i){
         setTimeout(function () {
             if (game.gameorder[i] == 0) {
                 game.computerturn.push(i);
-                iconOne();
+                logoOne();
             }
+
+            if (game.gameorder[i] == 1) {
+                game.computerturn.push(i);
+                logoTwo();
+            }
+
+             if (game.gameorder[i] == 2) {
+                game.computerturn.push(i);
+                logoThree();
+            }
+
+              if (game.gameorder[i] == 3) {
+                game.computerturn.push(i);
+                logoThree();
+            }
+
+              if (game.gameorder[i] == 4) {
+                game.computerturn.push(i);
+                logoFour();
+            }
+
+              if (game.gameorder[i] == 5) {
+                game.computerturn.push(i);
+                logoFive();
+            }
+
       if (game.computerturn.length == game.gameorder.length) {
                 setTimeout(function () {
                     playerTurn();
@@ -53,15 +75,49 @@ function iconGlow(i){
 
 
 
-      function iconOne() {
+      function logoOne() {
         var audio = document.getElementById("audioarrowu");
         audio.play();
         $(".arrowup").addClass("effect-logo");
 
         setTimeout(function () {
             $(".fas").removeClass("effect-logo");
-        }, 600);
+        }, 700);
     }
 
+     function logoTwo() {
+        var audio = document.getElementById("musicnote");
+        audio.play();
+        $(".quaver").addClass("effect-logo");
+        setTimeout(function () {
+            $(".fas").removeClass("effect-logo");
+        }, 700);
+    }
 
+     function logoThree() {
+        var audio = document.getElementById("arrow-right");
+        audio.play();
+        $(".arrowrgt").addClass("effect-logo");
+        setTimeout(function () {
+            $(".fas").removeClass("effect-logo");
+        }, 700);
+    }
+
+    function logoFour() {
+        var audio = document.getElementById("arrowlft");
+        audio.play();
+        $(".arrowleft").addClass("effect-logo");
+        setTimeout(function () {
+            $(".fas").removeClass("effect-logo");
+        }, 700);
+    }
+
+    function logoFive() {
+        var audio = document.getElementById("arrowdwn");
+        audio.play();
+        $(".arrowdown").addClass("effect-logo");
+        setTimeout(function () {
+            $(".fas").removeClass("effect-logo");
+        }, 700);
+    }
    
