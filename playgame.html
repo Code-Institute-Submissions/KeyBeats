@@ -74,6 +74,8 @@
     <!-- Start Game Button -->
     <div class="go-btn"><button class="btn btn-outline-secondary home-btn" id="start" role="button" onclick="play()">Start</button>
 	</div>
+    <div class="go-btn"><button class="btn btn-outline-secondary home-btn hide-button" id="retry" role="button" onclick="play()">Retry</button>
+	</div>
     <audio id="audio" src="assets/audio/drumloopkb.wav" loop="loop"></audio>
 	<!-- Top row buttons -->
 	<div class="container">
@@ -82,22 +84,22 @@
 				<i class="fas fa-arrow-circle-up arrowup"></i>
                 <audio id="audioarrowu" src="assets/audio/cello.wav"></audio>
 			</div>
-			<div class="col-sm game-icon">
+			<div class="col-sm game-icon" id="notes">
 				<i class="fas fa-music quaver" ></i>
                 <audio id="musicnote" src="assets/audio/guitar.wav"></audio>
 			</div>
-			<div class="col-sm game-icon">
+			<div class="col-sm game-icon" id="arrowr">
 				<i class="fas fa-arrow-circle-right arrowrgt" ></i>
                 <audio id="arrow-right" src="assets/audio/rhodes.wav"></audio>
 			</div>
 		</div>
 		<!-- Bottom row buttons -->
 		<div class="row btm-rw ">
-			<div class="col-sm game-icon">
+			<div class="col-sm game-icon" id="arrowl">
 				<i class="fas fa-arrow-circle-left arrowleft" ></i>
                 <audio id="arrowlft" src="assets/audio/trumpet.wav"></audio>
 			</div>
-			<div class="col-sm game-icon">
+			<div class="col-sm game-icon" id="arrowd">
 				<i class="fas fa-arrow-circle-down arrowdown"></i>
                 <audio id="arrowdwn" src="assets/audio/fvox.wav"></audio>
 			</div>
