@@ -213,3 +213,53 @@ padding: .5em .5em;
     box-shadow: 0 0 2rem 1rem rgba(153, 0, 255, 0.753); 
     
 }
+
+
+/* Media Queries for Mobile Devices */
+
+@media only screen and (max-width: 576px){ 
+/* Headers */
+.ovr-head,.con-head{ 
+    font-size: .5em;
+    text-align: center;
+    }
+
+.btn-outline-secondary ,.sub-head{
+    font-size: 2em;
+}
+.sub{
+    margin-top: 1em;
+}
+/* Contact Form */
+.cont-form{
+    padding: 0;
+}
+
+.form-group{
+    margin-bottom: .5em
+}
+/*Home Buttons */
+.hme-btn{
+    font-size: .75em;
+}
+/* game page buttons */
+.fas{
+    font-size: 4em;
+}
+.col-sm{
+    margin-top: 2em;
+}
+.row {
+    display: flex; 
+    flex-wrap: nowrap;
+}
+}
+
+/* Media Query for Tablet */
+
+@media only screen and (device-width: 768px){
+    .cont-form{
+    padding: 0;
+}
+}
+

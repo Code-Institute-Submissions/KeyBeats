@@ -17,7 +17,7 @@ function newGame() {
   game.gameorder = [];
   game.computerturn = [];
   game.playerturn = [];
-  game.score = 99999;
+  game.score = 10;
   game.count = 0
   sequence();
 }
@@ -71,7 +71,7 @@ function iconGlow(i) {
         playerturn();
       }, 200);
     }
-  }, 2000 * i);
+  }, 1200* i);
 }
 
 function playerturn() {
@@ -109,7 +109,7 @@ $("#arrowd").click(function () {
 /* function for if player fails */
 function compareSequence(){
     if (game.playerTurn[game.count] != game.computerTurn[game.count])
-  $("#level").html("TRY AGAIN!");
+  $("div.btm-rw").text("TRY AGAIN!");
             $("#retry").removeClass("hide-button");
             $("#retry").click(function () {
                 retry();
