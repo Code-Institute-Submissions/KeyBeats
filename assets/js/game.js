@@ -9,7 +9,7 @@ let game = {
 
 /* Start new game */
 $("#start").click(function () {
-  newGame();
+    newGame();
 });
 
 function newGame() {
@@ -17,8 +17,13 @@ function newGame() {
   game.gameorder = [];
   game.computerturn = [];
   game.playerturn = [];
-  game.score = 10;
+  game.score = 9999;
   game.count = 0
+  $(".arrowup").disabled = false;
+       $(".quaver").disabled = false;
+       $(".arrowrgt").disabled = false;
+       $(".arrowleft").disabled = false;
+       $(".arrowdown").disabled = false;
   sequence();
 }
 
@@ -65,7 +70,7 @@ function iconGlow(i) {
       game.computerturn.push(i);
       logoFive();
     }
-    /* If the lengths are equal the player can take his/her turn */
+
     if (game.gameorder.length == game.computerturn.length) {
       setTimeout(function () {
         playerturn();
@@ -73,7 +78,7 @@ function iconGlow(i) {
     }
   }, 1200* i);
 }
-
+/* Players Turn */
 function playerturn() {
   $(".game-icon").on("click", function () {
     $(".game-icon").off();
@@ -85,6 +90,10 @@ function playerturn() {
 }
 
 $("#arrowups").click(function () {
+  game.playerturn.push(0);
+  logoOnea();
+});
+$("#arrowups").keypress(function (e) {
   game.playerturn.push(0);
   logoOnea();
 });
@@ -107,18 +116,26 @@ $("#arrowd").click(function () {
 });
 
 /* function for if player fails */
-function compareSequence(){
-    if (game.playerTurn[game.count] != game.computerTurn[game.count])
-  $("div.btm-rw").text("TRY AGAIN!");
-            $("#retry").removeClass("hide-button");
-            $("#retry").click(function () {
+    function compareSequence() {
+        if (game.playerSequence[game.count] != game.computerSequence[game.count]) {
+            $("#start").click(function () {
                 retry();
             });
-
+                game.count = 0;
+            } else {
+                playerTurn();
+                game.count++;
+            }
         }
-/* Add Retry button on failure */
+    
+/* Add Retry button on failure, disables buttons to stop cheating*/
          function retry() {
-        $("#retry").addClass("hide-button");
+       $("#start").addClass("show-button");
+       $(".arrowup").disabled = true;
+       $(".quaver").disabled = true;
+       $(".arrowrgt").disabled = true;
+       $(".arrowleft").disabled = true;
+       $(".arrowdown").disabled = true;
          }
 
 
