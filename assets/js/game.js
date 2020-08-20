@@ -135,8 +135,9 @@ $("#arrowd").click(function () {
         audio.pause();
         audio.currentTime = 0;
        $("#Modal").modal('show');
-       $("#start").removeClass("hide-button");
+       $("#start").removeClass("hide-button");   
        HighScoreBoard()
+       location.reload();
          }
 
 
