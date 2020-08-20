@@ -22,7 +22,6 @@ function newGame() {
   game.computerturn = [];
   game.playerturn = [];
   game.score = 9999;
-/*   game.count = 0 */
   sequence();
 }
 
@@ -36,6 +35,7 @@ function sequence() {
       iconGlow(i);
     }
   }, 1000);
+
 }
 /* Delay between sequence using set timeout. Advice from mentor to look for loop delay so all lights dont flash together https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/ */
 function iconGlow(i) {
@@ -70,13 +70,14 @@ function iconGlow(i) {
       logoFive();
     }
 
-    if (game.gameorder.length == game.computerturn.length) {
+    if (game.gameorder.length == game.computerturn.length ) {
       setTimeout(function () {
         playerturn();
-      }, 600);
+      }, 800);
     }
   }, 1200* i);
 }
+
 
 
 /* Players Turn */
@@ -118,7 +119,7 @@ $("#arrowd").click(function () {
 });
 
 
-/* function for if player fails */
+/* function for comparing both arrays if player fails retry function will be called */
     function compareSequence() {
         if (game.playerturn[game.playerturn.length -1 ] == game.computerturn[game.computerturn.length -1]) {
                 updateScoreBoard();  console.log("right")
@@ -134,11 +135,8 @@ $("#arrowd").click(function () {
         audio.pause();
         audio.currentTime = 0;
        $("#Modal").modal('show');
-
-
-
+       $("#start").removeClass("hide-button");
        HighScoreBoard()
-       
          }
 
 
