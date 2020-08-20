@@ -9,6 +9,7 @@ let game = {
 };
 /* Score and highscore */
 let yourscore = 0;
+let localStorageName = "KeyBeatsScore";
 
 /* Start new game */
 $("#start").click(function () {
@@ -22,7 +23,6 @@ function newGame() {
   game.playerturn = [];
   game.score = 9999;
 /*   game.count = 0 */
-  resetScore(); 
   sequence();
 }
 
@@ -120,7 +120,7 @@ $("#arrowd").click(function () {
 
 /* function for if player fails */
     function compareSequence() {
-        if (game.playerturn[game.playerturn.length -1] == game.computerturn[game.computerturn.length -1]) {
+        if (game.playerturn[game.playerturn.length -1 ] == game.computerturn[game.computerturn.length -1]) {
                 updateScoreBoard();  console.log("right")
         }else{
              retry(); console.log("wrong")
@@ -134,7 +134,11 @@ $("#arrowd").click(function () {
         audio.pause();
         audio.currentTime = 0;
        $("#Modal").modal('show');
-       newGame()
+
+
+
+       HighScoreBoard()
+       
          }
 
 
@@ -224,4 +228,18 @@ function resetScore() {
     let yourscore = 0;
     let scoreBox = document.getElementById("score");
     scoreBox.textContent = score;
+}
+
+/* Local Storage Highscore got advice for code from STACKOVERFLOW https://stackoverflow.com/questions/26440147/use-local-storage-to-remember-the-high-score-javascript */
+function HighScoreBoard() {
+    if (localStorage.getItem(localStorageName) === null) {
+        highScore = 0;
+    }
+    else {
+        highScore = localStorage.getItem(localStorageName);
+    }
+    highScore = Math.max(yourscore, highScore);
+    localStorage.setItem(localStorageName, highScore);
+    let highScoreBox = document.getElementById("highScore");
+    highScoreBox.textContent = highScore;
 }
