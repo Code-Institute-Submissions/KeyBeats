@@ -257,7 +257,7 @@ padding: .5em .5em;
 
 /* Media Query for Tablet */
 
-@media only screen and (device-width: 768px){
+@media only screen and (max-width: 768px){
     .cont-form{
     padding: 0;
 }
