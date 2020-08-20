@@ -30,7 +30,7 @@ function newGame() {
 function sequence() {
   setTimeout(function () {
     for (i = 0; i < game.score; i++) {
-      game.gameorder.push(Math.floor(Math.random() ,100* 5));
+      game.gameorder.push(Math.floor(Math.random() * 5));
     }
     for (i = 0; i < game.gameorder.length; i++) {
       iconGlow(i);
@@ -121,16 +121,20 @@ $("#arrowd").click(function () {
 /* function for if player fails */
     function compareSequence() {
         if (game.playerturn[game.playerturn.length -1] == game.computerturn[game.computerturn.length -1]) {
-                /* updateScoreBoard(); */ console.log("right")
+                updateScoreBoard();  console.log("right")
         }else{
-            /* retry(); */ console.log("wrong")
+             retry(); console.log("wrong")
         }
     }
         
 
 /* Add Retry button on failure, disables buttons to stop cheating*/
          function retry() {
-       $("#start").addClass("show-button");
+        document.getElementById("audio");
+        audio.pause();
+        audio.currentTime = 0;
+       $("#Modal").modal('show');
+       newGame()
          }
 
 

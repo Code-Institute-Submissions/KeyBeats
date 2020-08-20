@@ -25,6 +25,7 @@
         <!-- Modal Script -->
         <script>
     $(document).ready(function(){
+        $("#Modal").modal('hide');
         $("#myModal").modal('show');
         
     });
@@ -43,11 +44,11 @@
 
 <body class="bg">
  
-  <!-- Modal -->
+  <!-- Instructions Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
-      <!-- Modal content-->
+      <!-- Instructions Modal content-->
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Instructions</h4>
@@ -56,6 +57,27 @@
           <p class="modal-text">Keybeats is a musical memory game. A drumbeat will start at the click of the 'START' button and 
           the icons will randomly highlght in a sequence, you must memorise and reproduce the sequence using the conrrespoding arrow
           keys and space bar for the music notes.</p>
+            <br>
+            <p class ="modal-text">Good Luck and Have fun!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Play</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+   <!-- Game Over Modal -->
+  <div class="modal fade" id="Modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Game Over Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Game Over</h4>
+        </div>
+        <div class="modal-body">
+          <p class="modal-text">Better Luck Next Time!</p>
             <br>
             <p class ="modal-text">Good Luck and Have fun!</p>
         </div>
