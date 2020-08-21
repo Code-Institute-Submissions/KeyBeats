@@ -3,10 +3,12 @@ let game = {
   gameorder: [],
   computerturn: [],
   playerturn: [],
-  score: 0,
-  count: 0
-
+  tally: 0,
+  count: 0,
 };
+
+let incriments = 1;
+
 /* Score and highscore */
 let yourscore = 0;
 let localStorageName = "KeyBeatsScore";
@@ -21,14 +23,15 @@ function newGame() {
   game.gameorder = [];
   game.computerturn = [];
   game.playerturn = [];
-  game.score = 9999;
+  game.tally = 1;
+  game.count = 0;
   sequence();
 }
 
-/* Randonmly generated sequence for computertun */
+/* Randonmly generated sequence of five icon glows computerturn loop advice from code institue tutor "scott" */
 function sequence() {
   setTimeout(function () {
-    for (i = 0; i < game.score; i++) {
+    for (i = 0; i < incriments; i++) {
       game.gameorder.push(Math.floor(Math.random() * 5));
     }
     for (i = 0; i < game.gameorder.length; i++) {
@@ -69,16 +72,16 @@ function iconGlow(i) {
       game.computerturn.push(i);
       logoFive();
     }
-
+      
     if (game.gameorder.length == game.computerturn.length ) {
-      setTimeout(function () {
+     icontime = setTimeout(function () {
         playerturn();
-      }, 800);
+      }, 200);
     }
   }, 1200* i);
+   
+   
 }
-
-
 
 /* Players Turn */
 function playerturn() {
@@ -87,47 +90,78 @@ function playerturn() {
     setTimeout(function () {
       $(".game-icon").css("cursor", "");
       compareSequence();
-    }, 800);
+    }, 600);
   });
 }
 
 $("#arrowups").click(function () {
   game.playerturn.push(0);
   logoOnea();
-  compareSequence();
+  
 });
 
 $("#notes").click(function () {
   game.playerturn.push(1);
   logoTwoa();
-    compareSequence(); 
+    
 });
 $("#arrowr").click(function () {
   game.playerturn.push(2);
   logoThreea();
-    compareSequence(); 
+    
 });
 $("#arrowl").click(function () {
   game.playerturn.push(3);
   logoFoura();
-    compareSequence();
+    
 });
 $("#arrowd").click(function () {
   game.playerturn.push(4);
   logoFivea();
-  compareSequence();
+  
 });
 
 
 /* function for comparing both arrays if player fails retry function will be called */
     function compareSequence() {
-        if (game.playerturn[game.playerturn.length -1 ] == game.computerturn[game.computerturn.length -1]) {
-                updateScoreBoard();  console.log("right")
+     /*    if (game.playerturn[game.count] != game.computerturn[game.count]) {
+                  retry(); console.log("wrong") 
         }else{
-             retry(); console.log("wrong")
-        }
-    }
+               if (game.computerturn.length == game.playerturn.length) {
+                $("#counter").html("ONWARD!");
+                    onward();
+                    updateScoreBoard();
+                     playerTurn(); console.log("right") 
+           game.count ++
+      
+               }
+        }}  */
+
+
+             if (game.playerturn[game.count] != game.computerturn[game.count]) {
+            $("#counter").html("Wrong!");
+                retry();
+        } else {
+            if (game.computerturn.length == game.playerturn.length) {
+                $("#counter").html("Good!");
+                    onward();
+                game.count = 0;
+            } else {
+               
+                playerTurn();
+                game.count++;
+            }
+        }}
+    
         
+    
+           
+        function onward(){
+        game.playerturn = [];
+        game.computerturn = [];
+        game.tally++;
+        sequence();
+        }
 
 /* Add Retry button on failure, disables buttons to stop cheating*/
          function retry() {
@@ -137,7 +171,7 @@ $("#arrowd").click(function () {
        $("#Modal").modal('show');
        $("#start").removeClass("hide-button");   
        HighScoreBoard()
-       location.reload();
+       /* location.reload(); */
          }
 
 
