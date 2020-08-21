@@ -38,8 +38,11 @@ function sequence() {
 
 }
 /* Delay between sequence using set timeout. Advice from mentor to look for loop delay so all lights dont flash together https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/ */
+let slowglow
+
+
 function iconGlow(i) {
-  setTimeout(function () {
+ slowglow = setTimeout(function () {
     if (game.gameorder[i] == 0) {
       game.computerturn.push(i);
       logoOne();
@@ -72,7 +75,7 @@ function iconGlow(i) {
 
     if (game.gameorder.length == game.computerturn.length ) {
       setTimeout(function () {
-        playerturn();
+        playerturn();  
       }, 800);
     }
   }, 1200* i);
@@ -90,43 +93,96 @@ function playerturn() {
     }, 800);
   });
 }
-
+/* Click Arrow UP Logo */
 $("#arrowups").click(function () {
   game.playerturn.push(0);
   logoOnea();
   compareSequence();
 });
+/* Arrow Key Up */
+document.getElementById("#arrowups")
+document.addEventListener('keydown',playerturn => {
+if (playerturn.isComposing || playerturn.keyCode === 38) {
+     game.playerturn.push(0);
+  logoOnea();
+  compareSequence();
+}});
 
+/* Click Music note logo */
 $("#notes").click(function () {
   game.playerturn.push(1);
   logoTwoa();
     compareSequence(); 
 });
+
+/* Space Bar for music notes */
+document.getElementById("#notes")
+document.addEventListener('keydown',playerturn => {
+if (playerturn.isComposing || playerturn.keyCode === 32) {
+     game.playerturn.push(1);
+  logoTwoa();
+  compareSequence();
+}});
+
+/* Click Arrow Right Logo */
 $("#arrowr").click(function () {
   game.playerturn.push(2);
   logoThreea();
     compareSequence(); 
 });
+/* Arrow Right Key */
+document.getElementById("#arrowr")
+document.addEventListener('keydown',playerturn => {
+if (playerturn.isComposing || playerturn.keyCode === 39) {
+     game.playerturn.push(2);
+  logoThreea();
+  compareSequence();
+}});
+
+/* Click Arrow Left Logo */
 $("#arrowl").click(function () {
   game.playerturn.push(3);
   logoFoura();
     compareSequence();
 });
+
+/* Arrow Left Key */
+document.getElementById("#arrowr")
+document.addEventListener('keydown',playerturn => {
+if (playerturn.isComposing || playerturn.keyCode === 37) {
+     game.playerturn.push(3);
+  logoFoura();
+  compareSequence();
+}});
+
+/* Arrow Down Logo Click */
 $("#arrowd").click(function () {
   game.playerturn.push(4);
   logoFivea();
   compareSequence();
 });
 
+/* Arrow Down Key */
+document.getElementById("#arrowd")
+document.addEventListener('keydown',playerturn => {
+if (playerturn.isComposing || playerturn.keyCode === 40) {
+     game.playerturn.push(4);
+  logoFivea();
+  compareSequence();
+}});
+
+
 
 /* function for comparing both arrays if player fails retry function will be called */
     function compareSequence() {
-        if (game.playerturn[game.playerturn -1 ] == game.computerturn[game.computerturn -1]) {
+        if (game.playerturn[game.playerturn.length -1 ] == game.computerturn[game.computerturn.length -1]) {
                 updateScoreBoard();  console.log("right")
         }else{
-             retry(); console.log("wrong")
+            if 
+                (retry()); console.log("wrong")
+            }
         }
-    }
+    
         
 
 /* Add Retry button on failure, disables buttons to stop cheating*/
