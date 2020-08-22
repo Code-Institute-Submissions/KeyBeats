@@ -1,4 +1,4 @@
- ![]https://github.com/adams-ears/KeyBeats/blob/master/assets/images/Keybeats.jpg
+ ![](https://github.com/adams-ears/KeyBeats/blob/master/assets/images/kbmock.png)
 
 # KeyBeats
 [Live Site](https://adams-ears.github.io/KeyBeats/)
