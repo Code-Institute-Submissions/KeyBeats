@@ -45,10 +45,10 @@ Here is a list of the features included on the site. Along with possible additio
 - Contact form submission, allowing users to give feedback based on experience.
 - Instructions modal popup where detailed instructions in order to play will be given.
 - Responsive design, with a landing page that works well across all platforms from desktop to mobile.
-- Local highscores recorded from last use
 **Future features to be included at a later stage:**
 - Multiple difficulty selections will add more variety to the game.
 - Having the ability to pause the game will give users a better experience as they will be able to walk away and return whenever.
+- Local highscores recorded from last use
 
 
 
@@ -67,7 +67,7 @@ Various different technologies have been used throughout my project, they are as
 - **CSS3** Cascading style sheet language used in conjunction with HTML to create ontent and style.
 - **JavaScript** is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. 
 - **jQuery** is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
-- **Jasmine** is used to test certain codes in game.js
+
 
 ## Testing
 
@@ -90,7 +90,7 @@ Browser compatability was tested across five different web browsers and these ar
 - Safari
 - Opera
 
-The webpage was desinged using Google Chrome however functions on all browsers mentioned above. 
+The game was desinged using Google Chrome however functions on all browsers mentioned above. 
 
 ### Other testing
 
@@ -109,7 +109,7 @@ the webpage more user friendly, as well as having access to feedback from a 'fre
 
 
 ### Media
-
+[The background image used across the game site](https://unsplash.com/photos/Ef96lad5ORk)
 
 
 ### Acknowledgements

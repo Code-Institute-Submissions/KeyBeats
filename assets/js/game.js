@@ -3,13 +3,11 @@ let game = {
   gameorder: [],
   computerturn: [],
   playerturn: [],
-  score: 0,
   count: 0
 
 };
-/* Score and highscore */
+/* Score */
 let yourscore = 0;
-let localStorageName = "KeyBeatsScore";
 
 /* Start new game */
 $("#start").click(function () {
@@ -21,14 +19,14 @@ function newGame() {
   game.gameorder = [];
   game.computerturn = [];
   game.playerturn = [];
-  game.score = 9999;
+ /*  game.score = 9999; */
   sequence();
 }
 
 /* Randonmly generated sequence for computertun */
 function sequence() {
   setTimeout(function () {
-    for (i = 0; i < game.score; i++) {
+    for (i = 0; i <9999; i++) {
       game.gameorder.push(Math.floor(Math.random() * 5));
     }
     for (i = 0; i < game.gameorder.length; i++) {
@@ -37,12 +35,10 @@ function sequence() {
   }, 1000);
 
 }
-/* Delay between sequence using set timeout. Advice from mentor to look for loop delay so all lights dont flash together https://www.geeksforgeeks.org/how-to-add-a-delay-in-a-javascript-loop/ */
-let slowglow
-
+/* Delay between sequence using set timeout. Advice from mentor to look for loop delay so all lights dont flash together*/
 
 function iconGlow(i) {
- slowglow = setTimeout(function () {
+ setTimeout(function () {
     if (game.gameorder[i] == 0) {
       game.computerturn.push(i);
       logoOne();
@@ -80,8 +76,6 @@ function iconGlow(i) {
     }
   }, 1200* i);
 }
-
-
 
 /* Players Turn */
 function playerturn() {
@@ -175,15 +169,14 @@ if (playerturn.isComposing || playerturn.keyCode === 40) {
 
 /* function for comparing both arrays if player fails retry function will be called */
     function compareSequence() {
-        if (game.playerturn[game.playerturn.length -1 ] == game.computerturn[game.computerturn.length -1]) {
+        if (game.playerturn.length -1 == game.computerturn.length -1) {
                 updateScoreBoard();  console.log("right")
         }else{
             if 
                 (retry()); console.log("wrong")
             }
         }
-    
-        
+         
 
 /* Add Retry button on failure, disables buttons to stop cheating*/
          function retry() {
@@ -192,8 +185,7 @@ if (playerturn.isComposing || playerturn.keyCode === 40) {
         audio.currentTime = 0;
        $("#Modal").modal('show');
        $("#start").removeClass("hide-button");   
-       HighScoreBoard()
-       /* location.reload(); */
+        location.reload(); 
          }
 
 
@@ -271,7 +263,7 @@ function logoFivea() {
 }
 
 
-/* Scoreboard and highscore */
+/* Scoreboard */
 function updateScoreBoard() {
     yourscore++;
     let scoreBox = document.getElementById("score");
@@ -283,18 +275,4 @@ function resetScore() {
     let yourscore = 0;
     let scoreBox = document.getElementById("score");
     scoreBox.textContent = score;
-}
-
-/* Local Storage Highscore got advice for code from STACKOVERFLOW https://stackoverflow.com/questions/26440147/use-local-storage-to-remember-the-high-score-javascript */
-function HighScoreBoard() {
-    if (localStorage.getItem(localStorageName) === null) {
-        highScore = 0;
-    }
-    else {
-        highScore = localStorage.getItem(localStorageName);
-    }
-    highScore = Math.max(yourscore, highScore);
-    localStorage.setItem(localStorageName, highScore);
-    let highScoreBox = document.getElementById("highScore");
-    highScoreBox.textContent = highScore;
 }
