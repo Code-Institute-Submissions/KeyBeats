@@ -3,7 +3,7 @@ let game = {
   gameorder: [],
   computerturn: [],
   playerturn: [],
-  count: 0
+  
 
 };
 /* Score */
@@ -19,7 +19,6 @@ function newGame() {
   game.gameorder = [];
   game.computerturn = [];
   game.playerturn = [];
- /*  game.score = 9999; */
   sequence();
 }
 
