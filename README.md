@@ -67,6 +67,8 @@ Various different technologies have been used throughout my project, they are as
 - **CSS3** Cascading style sheet language used in conjunction with HTML to create ontent and style.
 - **JavaScript** is a text-based programming language used both on the client-side and server-side that allows you to make web pages interactive. 
 - **jQuery** is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation
+- **EmailJS** allows sending email directly from Javascript, with no backend development.
+
 
 
 ## Testing
@@ -99,8 +101,14 @@ This was extremely valuable for feedback from other mentors, module leads and st
 the webpage more user friendly, as well as having access to feedback from a 'fresh set of eyes'.
 
 ## Deployment
-
-**Github Pages**
+In order to successfully publish the game site these following steps had to be taken:
+- Open **Repositories** on the **GitHub** home page, after logging in.
+- Select **Settings**
+- Scroll down to **Github Pages**
+- Select the dropdown menu under **Source** 
+- Select **Master Branch** and press **Save**
+- The page will refresh, scroll back down to **GitHub Pages** and you will see a green box with a green tick along with the statement
+**Your site is published at**( https://adams-ears.github.io/KeyBeats/.)
 
 ## Credits
 
@@ -110,6 +118,7 @@ the webpage more user friendly, as well as having access to feedback from a 'fre
 
 ### Media
 [The background image used across the game site](https://unsplash.com/photos/Ef96lad5ORk)
+All sounds used for game from [SampleSwap](https://sampleswap.org/)
 
 
 ### Acknowledgements
