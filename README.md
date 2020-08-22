@@ -1,10 +1,22 @@
 # KeyBeats
-[Live Site]
+![](assets/images/KeyBeats.jpg)
+[Live Site](https://adams-ears.github.io/KeyBeats/)
 
 This project has been designed as a webbased memory game. The **KeyBeats** project will showcase my ability to use HTML, CSS and Javascript
 for my Milestrone Project 2.
 
-## Project
+## Contents 
+1. [Project](#project)
+2. [UX](#ux)
+3. [Features](#features)
+4. [Technologies](#tech)
+5. [Testing](#test)
+6. [Deployment](#deploy)
+7. [Credits](#credit)
+
+
+
+## Project <a name="project"></a>
 My project will be a reflection of what i have learnt so far from the (Full Stack Developer course). KeyBeats is a memory game which introduces various instruments that will light up when randomly generated, 
 players must then press the corresponding key in order to correctly select the instrument which is highlighted. 
 The game will progressively speed up and the time allowed to select each instrument will decrease making for a challenging memory game.
@@ -18,7 +30,7 @@ The three pages and their purposes are as follows:
 
 ![Page Structure](assets/wireframe/KBStructure.jpg)
 
-## UX
+## UX <a name="ux"></a>
 This site brings a web based game to the user and allows the player to easily navigate through from landing page to full game mode with only a single click of the mouse. 
 Instructions are clearly outlined and are easy to find from the navigation menu on the home page. A contact form has also been added for queries, feedback or development ideas from players
  
@@ -33,11 +45,14 @@ Instructions are clearly outlined and are easy to find from the navigation menu 
 
 The links below will take you to a PDF of each of the wireframes i have created for this project.
 
+![Desktop Wireframe](assets/wireframe/KBdesktop.pdf)
+![mobile Wireframe](assets/wireframe/KBmobile.pdf)
+
 
 ### Design Progression
 
 
-## Features
+## Features <a name="features"></a>
 
 Here is a list of the features included on the site. Along with possible additions later in order to develop the game.
 **Features included:**
@@ -52,7 +67,7 @@ Here is a list of the features included on the site. Along with possible additio
 
 
 
-## Technologies
+## Technologies <a name="tech"></a>
 
 Various different technologies have been used throughout my project, they are as follows:
 
@@ -71,16 +86,20 @@ Various different technologies have been used throughout my project, they are as
 
 
 
-## Testing
+## Testing <a name="test"></a>
 
 ### HTML Validatior
+All HTML Valid - Errors that show in contact.html are from Bootstrap form templates and EmailJS CDN.
 Results from HTML validatior:
-
-
+![HTML Validation](assets/images/ms2htmlvalid.jpg)
 
 ### CSS Validatior
-Results from CSS validator - Errors shown in image below are due to Bootstrap framework.
+Results from CSS validator - No Errors found.
+![CSS Validation](assets/images/cssvalidms2.jpg)
 
+### Js Validatior
+All Syntax Valid
+![JS Validation](assets/images/jsvalidation.jpg)
 
 
 ### Browser Compatability
@@ -95,12 +114,13 @@ Browser compatability was tested across five different web browsers and these ar
 The game was desinged using Google Chrome however functions on all browsers mentioned above. 
 
 ### Other testing
+Email testing occured in order to perfect the use of EmailJS results can be seen in the photos below:
 
-The webpage was submitted to the peer-code-review channel within the code institutes slack community.
-This was extremely valuable for feedback from other mentors, module leads and students. It helped me to undersand what could be added or removed to make
-the webpage more user friendly, as well as having access to feedback from a 'fresh set of eyes'.
+![EmailJS Test](assets/images/emailjstest.jpg)
+![EmailJS Test Confirmation](assets/images/emailjstestconfirm.jpg)
 
-## Deployment
+
+## Deployment <a name="deploy"></a>
 In order to successfully publish the game site these following steps had to be taken:
 - Open **Repositories** on the **GitHub** home page, after logging in.
 - Select **Settings**
@@ -108,19 +128,24 @@ In order to successfully publish the game site these following steps had to be t
 - Select the dropdown menu under **Source** 
 - Select **Master Branch** and press **Save**
 - The page will refresh, scroll back down to **GitHub Pages** and you will see a green box with a green tick along with the statement
-**Your site is published at**( https://adams-ears.github.io/KeyBeats/.)
+**Your site is published at** https://adams-ears.github.io/KeyBeats/.
 
-## Credits
+## Credits <a name="credit"></a>
 
 ### Content
-
-
-
+All text and design ideas are original content from the developer
 ### Media
-[The background image used across the game site](https://unsplash.com/photos/Ef96lad5ORk)
-All sounds used for game from [SampleSwap](https://sampleswap.org/)
-
+- [The background image used across the game site](https://unsplash.com/photos/Ef96lad5ORk)
+- All sounds used for game from [SampleSwap](https://sampleswap.org/)
+- [Favicon image](https://pixabay.com/photos/piano-piano-keys-music-instrument-1245645/) 
+- Main Icons from https://fontawesome.com/
 
 ### Acknowledgements
-
+I gained inspiration for designing a game in order to showcase my ability, i would like to thank 
+my partner for the constant support and clarity to assist me to develop calmly. I would also like to give 
+a large amount of thanks and praise to my mentor Jonathan Munz for once again being incredibly supportive of 
+my inital ideas, along with giving me the guidance during what i found to be a tough step up into the Javascipt world. 
+My final praise goes to all the tutors, mentors, alumni and current students at Code Institute for being supportive predominantly through
+Slack, but also via phonecall, skype and email. The community here ate Code Institute is something to be admired especially during 
+these tought times! so THANK YOU again!.
 
