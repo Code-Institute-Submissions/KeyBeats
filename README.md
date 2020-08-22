@@ -1,5 +1,6 @@
+ ![]https://github.com/adams-ears/KeyBeats/blob/master/assets/images/Keybeats.jpg
+
 # KeyBeats
-![](assets/images/KeyBeats.jpg)
 [Live Site](https://adams-ears.github.io/KeyBeats/)
 
 This project has been designed as a webbased memory game. The **KeyBeats** project will showcase my ability to use HTML, CSS and Javascript
@@ -45,11 +46,9 @@ Instructions are clearly outlined and are easy to find from the navigation menu 
 
 The links below will take you to a PDF of each of the wireframes i have created for this project.
 
-![Desktop Wireframe](assets/wireframe/KBdesktop.pdf)
-![mobile Wireframe](assets/wireframe/KBmobile.pdf)
+[Desktop Wireframe](https://github.com/adams-ears/KeyBeats/blob/master/assets/wireframe/KBdesktop.pdf)
 
-
-### Design Progression
+[mobile Wireframe](https://github.com/adams-ears/KeyBeats/blob/master/assets/wireframe/KBmobile.pdf)
 
 
 ## Features <a name="features"></a>
@@ -60,6 +59,7 @@ Here is a list of the features included on the site. Along with possible additio
 - Contact form submission, allowing users to give feedback based on experience.
 - Instructions modal popup where detailed instructions in order to play will be given.
 - Responsive design, with a landing page that works well across all platforms from desktop to mobile.
+
 **Future features to be included at a later stage:**
 - Multiple difficulty selections will add more variety to the game.
 - Having the ability to pause the game will give users a better experience as they will be able to walk away and return whenever.
